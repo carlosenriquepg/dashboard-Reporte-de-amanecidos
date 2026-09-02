@@ -1,0 +1,43 @@
+table GER_DEPAR
+	lineageTag: 42cadee7-6dc9-4955-b9bf-6f5f5eea92a7
+
+	column CODSERV
+		dataType: string
+		lineageTag: 064b4b0f-c2c6-4cb5-bb1f-09461eca9e7b
+		summarizeBy: none
+		sourceColumn: CODSERV
+
+		annotation SummarizationSetBy = Automatic
+
+	column GERENCIA
+		dataType: string
+		lineageTag: 1bf22d12-03ff-4559-932d-3e8f1dd7d3bd
+		summarizeBy: none
+		sourceColumn: GERENCIA
+
+		annotation SummarizationSetBy = Automatic
+
+	column DEPARTAMENTO
+		dataType: string
+		lineageTag: 1d434df3-8c9a-4078-8b9d-3f9c7749c09c
+		summarizeBy: none
+		sourceColumn: DEPARTAMENTO
+
+		annotation SummarizationSetBy = Automatic
+
+	partition GER_DEPAR = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("Z:\JEFATURA\POWER BI GENERAL\AMANECIDOS\ENLACES\GERENCIAS.xlsx"), null, true),
+				    Hoja1_Sheet = Origen{[Item="Hoja1",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Hoja1_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"CODSERV", type text}, {"GERENCIA", type text}, {"DEPARTAMENTO", type text}}),
+				    #"Filas en blanco eliminadas" = Table.SelectRows(#"Tipo cambiado", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null})))
+				in
+				    #"Filas en blanco eliminadas"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

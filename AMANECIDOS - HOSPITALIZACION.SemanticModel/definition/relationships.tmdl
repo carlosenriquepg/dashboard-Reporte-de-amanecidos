@@ -1,0 +1,24 @@
+relationship f48f115c-91d9-460b-9c52-17fca7ebbe80
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'FECHA ACTUALIZACION'.LastRefresh
+	toColumn: LocalDateTable_5c240e8b-be4e-424e-b53c-e9a59b3a109f.Date
+
+relationship 96af823d-0138-490d-a98a-5edaee4f6504
+	joinOnDateBehavior: datePartOnly
+	fromColumn: LineaTiempo.Fecha
+	toColumn: LocalDateTable_1935956d-2294-4ef8-9457-e20d97087b31.Date
+
+relationship e8b5bdbe-d843-457a-951a-c89c119b298d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: BDI_HOS_UBICACIÓN.FEC_INGR
+	toColumn: LocalDateTable_98fda02d-44ff-4b17-a441-c00c99d0c114.Date
+
+relationship c652d43a-d81d-408d-b969-44d8b6b86a43
+	joinOnDateBehavior: datePartOnly
+	fromColumn: EstDispoCama.FECHINGRESO
+	toColumn: LocalDateTable_c4419115-3fca-4e5f-92c5-3379557f03b8.Date
+
+relationship AutoDetected_6c1319e1-9768-4f06-8f07-7c43e46c838f
+	fromColumn: BDI_HOS_UBICACIÓN.ESTACION
+	toColumn: CLASIFICACION.ESTACION
+

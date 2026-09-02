@@ -1,0 +1,22 @@
+table Medidas
+	lineageTag: 14d9e1ea-983c-43ee-9300-c85f56f01f7b
+
+	measure 'Nro. Pacientes' = COUNT('BDI_HOS_UBICACIÓN'[PACIENTE])+0
+		formatString: 0
+		lineageTag: bddc8e93-c9a0-4a82-8bb8-b73aa350d008
+
+	partition Medidas = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
+				    #"Filas filtradas" = Table.SelectRows(Origen, each true),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Filas filtradas",{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

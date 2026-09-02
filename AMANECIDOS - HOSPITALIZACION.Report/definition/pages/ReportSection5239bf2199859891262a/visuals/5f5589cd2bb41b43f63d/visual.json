@@ -1,0 +1,543 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "5f5589cd2bb41b43f63d",
+  "position": {
+    "x": 476.39569049951029,
+    "y": 218.1390793339863,
+    "z": 17000,
+    "height": 465.11263467189031,
+    "width": 803.60430950048976,
+    "tabOrder": 16000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BDI_HOS_UBICACIÓN"
+                    }
+                  },
+                  "Property": "PISO"
+                }
+              },
+              "queryRef": "Sum(BDI_HOS_UBICACIÓN.PISO)",
+              "nativeQueryRef": "PISO1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BDI_HOS_UBICACIÓN"
+                    }
+                  },
+                  "Property": "BLOCK"
+                }
+              },
+              "queryRef": "BDI_HOS_UBICACIÓN.BLOCK",
+              "nativeQueryRef": "BLOCK"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BDI_HOS_UBICACIÓN"
+                    }
+                  },
+                  "Property": "SERVICIO"
+                }
+              },
+              "queryRef": "BDI_HOS_UBICACIÓN.SERVICIO",
+              "nativeQueryRef": "SERVICIO"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BDI_HOS_UBICACIÓN"
+                    }
+                  },
+                  "Property": "ESTACION"
+                }
+              },
+              "queryRef": "BDI_HOS_UBICACIÓN.ESTACION",
+              "nativeQueryRef": "ESTACION"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BDI_HOS_UBICACIÓN"
+                        }
+                      },
+                      "Property": "ESTANCIA_HNERM"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(BDI_HOS_UBICACIÓN.ESTANCIA_HNERM)",
+              "nativeQueryRef": "ESTANCIA EN HNERM",
+              "displayName": "ESTANCIA EN HNERM"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BDI_HOS_UBICACIÓN"
+                    }
+                  },
+                  "Property": "EDAD"
+                }
+              },
+              "queryRef": "Sum(BDI_HOS_UBICACIÓN.EDAD)",
+              "nativeQueryRef": "EDAD1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BDI_HOS_UBICACIÓN"
+                    }
+                  },
+                  "Property": "SEXO"
+                }
+              },
+              "queryRef": "BDI_HOS_UBICACIÓN.SEXO",
+              "nativeQueryRef": "SEXO"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BDI_HOS_UBICACIÓN"
+                    }
+                  },
+                  "Property": "CAMA"
+                }
+              },
+              "queryRef": "BDI_HOS_UBICACIÓN.CAMA",
+              "nativeQueryRef": "CAMA"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "BDI_HOS_UBICACIÓN"
+                  }
+                },
+                "Property": "PISO"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontColorPrimary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 6,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 6,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 5,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "outlineWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Arial Black'''"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "89.89585140970071D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BDI_HOS_UBICACIÓN.BLOCK"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "101.14594046352673D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(BDI_HOS_UBICACIÓN.ESTANCIA.AL.SERVICIO.ACTUAL)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "92.03474683820734D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(BDI_HOS_UBICACIÓN.ESTANCIA_HNERM)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "145.85100836891277D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BDI_HOS_UBICACIÓN.ESTACION"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "181.27290571756663D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BDI_HOS_UBICACIÓN.SERVICIO"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "58.0440851451532D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(BDI_HOS_UBICACIÓN.PISO)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "73.636590998623D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BDI_HOS_UBICACIÓN.CAMA"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "62.79473332091813D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BDI_HOS_UBICACIÓN.SEXO"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "79.59547338636415D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(BDI_HOS_UBICACIÓN.EDAD)"
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(BDI_HOS_UBICACIÓN.PISO)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BDI_HOS_UBICACIÓN.BLOCK"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(BDI_HOS_UBICACIÓN.EDAD)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BDI_HOS_UBICACIÓN.SEXO"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BDI_HOS_UBICACIÓN.CAMA"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(BDI_HOS_UBICACIÓN.ESTANCIA_HNERM)"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'None'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "35D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

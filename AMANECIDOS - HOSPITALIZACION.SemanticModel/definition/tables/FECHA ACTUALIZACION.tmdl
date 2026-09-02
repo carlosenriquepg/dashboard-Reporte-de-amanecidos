@@ -1,0 +1,32 @@
+table 'FECHA ACTUALIZACION'
+	lineageTag: 52b7070b-34c5-48fb-8e6f-58339dbff17d
+
+	column LastRefresh
+		dataType: dateTime
+		formatString: d/mm/yyyy hh:nn:ss
+		lineageTag: 7c90fc0e-2f7a-411b-a990-dcd4308583d5
+		summarizeBy: none
+		sourceColumn: LastRefresh
+
+		variation Variación
+			isDefault
+			relationship: f48f115c-91d9-460b-9c52-17fca7ebbe80
+			defaultHierarchy: LocalDateTable_5c240e8b-be4e-424e-b53c-e9a59b3a109f.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	partition 'FECHA ACTUALIZACION-d9ea7cfd-26f5-40aa-a7d4-6ee2ab978dc2' = m
+		mode: import
+		source =
+				let
+				    Origen = let Source = #table(type table[LastRefresh=datetime], {{DateTime.LocalNow()}}) in Source,
+				    #"Filas filtradas" = Table.SelectRows(Origen, each true)
+				in
+				    #"Filas filtradas"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

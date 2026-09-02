@@ -1,0 +1,35 @@
+table CLASIFICACION
+	lineageTag: b1bcba8c-c445-4acd-ac1e-98dff17e03cc
+
+	column ESTACION
+		dataType: string
+		lineageTag: 9f597647-9108-420f-965c-e90198f13e2a
+		summarizeBy: none
+		sourceColumn: ESTACION
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLASIFICACION
+		dataType: string
+		lineageTag: 4133f59e-2f6d-4f65-9c1b-f1a3bc0729ff
+		summarizeBy: none
+		sourceColumn: CLASIFICACION
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CLASIFICACION = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("Z:\JEFATURA\POWER BI GENERAL\AMANECIDOS\ENLACES\TABLA DE CLASIFICACION(HOSPITA) 27.01.2025.xlsx"), null, true),
+				    CLASIFICACION_Sheet = Origen{[Item="CLASIFICACION",Kind="Sheet"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(CLASIFICACION_Sheet,{{"Column1", type text}, {"Column2", type text}}),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(#"Tipo cambiado", [PromoteAllScalars=true]),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"ESTACION", type text}, {"CLASIFICACION", type text}})
+				in
+				    #"Tipo cambiado1"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

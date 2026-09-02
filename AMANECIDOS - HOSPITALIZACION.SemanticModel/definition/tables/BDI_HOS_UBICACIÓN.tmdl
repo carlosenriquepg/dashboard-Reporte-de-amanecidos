@@ -1,0 +1,259 @@
+table BDI_HOS_UBICACIÓN
+	lineageTag: a91faeea-577f-472a-8e5b-cd5c4b2f40b2
+
+	column PISO
+		dataType: string
+		lineageTag: 07f4a501-a584-4c6b-a708-27f96eeba656
+		summarizeBy: none
+		sourceColumn: PISO
+
+		annotation SummarizationSetBy = Automatic
+
+	column BLOCK
+		dataType: string
+		lineageTag: 03e51b8a-4878-4d7d-9d7a-ad256fadaf03
+		summarizeBy: none
+		sourceColumn: BLOCK
+
+		annotation SummarizationSetBy = Automatic
+
+	column GERENCIA
+		dataType: string
+		lineageTag: 51ae651b-9b7c-4f49-a773-5a36af6766c4
+		summarizeBy: none
+		sourceColumn: GERENCIA
+
+		annotation SummarizationSetBy = Automatic
+
+	column DEPARTAMENTO
+		dataType: string
+		lineageTag: b179bcf1-1687-45ab-9298-28db647cbdb1
+		summarizeBy: none
+		sourceColumn: DEPARTAMENTO
+
+		annotation SummarizationSetBy = Automatic
+
+	column SERVICIO
+		dataType: string
+		lineageTag: 155bf91b-d50d-4af0-afbd-063a346a451c
+		summarizeBy: none
+		sourceColumn: SERVICIO
+
+		annotation SummarizationSetBy = Automatic
+
+	column DNI
+		dataType: string
+		lineageTag: 840bd6d3-45f8-4915-8d4c-749345e31137
+		summarizeBy: none
+		sourceColumn: DNI
+
+		annotation SummarizationSetBy = Automatic
+
+	column AUTOGENERADO
+		dataType: string
+		lineageTag: 24a8f1fa-ad86-4788-aa46-19a6b7fabe35
+		summarizeBy: none
+		sourceColumn: AUTOGENERADO
+
+		annotation SummarizationSetBy = Automatic
+
+	column PACIENTE
+		dataType: string
+		lineageTag: 08ee4dd0-ebcc-4ba8-b584-d8efb5571705
+		summarizeBy: none
+		sourceColumn: PACIENTE
+
+		annotation SummarizationSetBy = Automatic
+
+	column EDAD
+		dataType: int64
+		formatString: 0
+		lineageTag: a9be9d14-f365-4f1b-b227-2e770b8300ff
+		summarizeBy: sum
+		sourceColumn: EDAD
+
+		annotation SummarizationSetBy = Automatic
+
+	column SEXO
+		dataType: string
+		lineageTag: cb963880-0c28-496b-a03d-3af71762eb8d
+		summarizeBy: none
+		sourceColumn: SEXO
+
+		annotation SummarizationSetBy = Automatic
+
+	column CAMA
+		dataType: string
+		lineageTag: 7fd2d60d-4082-4132-b98c-8b2de7365b26
+		summarizeBy: none
+		sourceColumn: CAMA
+
+		annotation SummarizationSetBy = Automatic
+
+	column AREA_PROCEDENCIA
+		dataType: string
+		lineageTag: f2c533f7-e7bb-49e9-976d-261e618970c8
+		summarizeBy: none
+		sourceColumn: AREA_PROCEDENCIA
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLASIFICACION
+		dataType: string
+		lineageTag: de056505-df84-4ee9-adcd-b789a66513ce
+		summarizeBy: none
+		sourceColumn: CLASIFICACION
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'RESUMEN ESTANCIA' =
+			
+			IF ('BDI_HOS_UBICACIÓN'[ESTANCIA_HNERM]>=-5 && 'BDI_HOS_UBICACIÓN'[ESTANCIA_HNERM]<=10, "1. MENOR A 10",
+			IF ('BDI_HOS_UBICACIÓN'[ESTANCIA_HNERM]>10 && 'BDI_HOS_UBICACIÓN'[ESTANCIA_HNERM]<=12,"2. ENTRE 10 - 12",
+			IF('BDI_HOS_UBICACIÓN'[ESTANCIA_HNERM]>12,"3. MAYOR A 12")))
+		lineageTag: 77bc569e-af87-4928-b096-fa2f049d1b90
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'RESUMEN ESTANCIA2' =
+			
+			IF ( 'BDI_HOS_UBICACIÓN'[ESTANCIA.AL.SERVICIO] >= -5 && 'BDI_HOS_UBICACIÓN'[ESTANCIA.AL.SERVICIO] <= 10, "1.MENOR A 10",
+			IF ( 'BDI_HOS_UBICACIÓN'[ESTANCIA.AL.SERVICIO] > 10 && 'BDI_HOS_UBICACIÓN'[ESTANCIA.AL.SERVICIO] <= 12, "2. ENTRE 10 - 12",
+			IF ( 'BDI_HOS_UBICACIÓN'[ESTANCIA.AL.SERVICIO] > 12, "3. MAYOR A 12" ) ) )
+		lineageTag: fc301d95-d604-4647-a3b2-67433cbca66b
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column ESTACION
+		dataType: string
+		lineageTag: 960d5873-8d0f-4946-819a-5c217e8263dc
+		summarizeBy: none
+		sourceColumn: ESTACION
+
+		annotation SummarizationSetBy = Automatic
+
+	column ESTANCIA_HNERM
+		dataType: int64
+		formatString: 0
+		lineageTag: 98fd4628-4916-4cee-89ea-df5c71cecce0
+		summarizeBy: sum
+		sourceColumn: ESTANCIA_HNERM
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'INGRESO.CIE.10'
+		dataType: string
+		lineageTag: cf3cfa11-c726-4f69-8645-1445909f7bbc
+		summarizeBy: none
+		sourceColumn: INGRESO.CIE.10
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'INGRESO.DESC_CIE.10'
+		dataType: string
+		lineageTag: c5a90291-2740-4e54-a6fa-b750d8eeaf88
+		summarizeBy: none
+		sourceColumn: INGRESO.DESC_CIE.10
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'AYER_CIE.10'
+		dataType: string
+		lineageTag: 4b906572-6274-4a62-9fd1-55e17dbdeacf
+		summarizeBy: none
+		sourceColumn: AYER_CIE.10
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'AYER.DES_CIE.10'
+		dataType: string
+		lineageTag: 699a0ed5-52f6-43e3-b9c9-0a919e485631
+		summarizeBy: none
+		sourceColumn: AYER.DES_CIE.10
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ESTACION.INGRESO'
+		dataType: string
+		lineageTag: 42237a5c-7160-4e04-a180-4faaadb1dab4
+		summarizeBy: none
+		sourceColumn: ESTACION.INGRESO
+
+		annotation SummarizationSetBy = Automatic
+
+	column FEC_INGR
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c6fcd549-567c-4e1a-a1e2-56637affe38c
+		summarizeBy: none
+		sourceColumn: FEC_INGR
+
+		variation Variación
+			isDefault
+			relationship: e8b5bdbe-d843-457a-951a-c89c119b298d
+			defaultHierarchy: LocalDateTable_98fda02d-44ff-4b17-a441-c00c99d0c114.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'ESTANCIA.AL.SERVICIO'
+		dataType: int64
+		formatString: 0
+		lineageTag: adcc540b-7558-4d4f-964d-8d1fe96bd6ec
+		summarizeBy: sum
+		sourceColumn: ESTANCIA.AL.SERVICIO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ACT. MEDICA'
+		dataType: string
+		lineageTag: 4fcdc212-0b2a-4fd9-8ba5-5b3f5b130bf7
+		summarizeBy: none
+		sourceColumn: ACT. MEDICA
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ESTANCIA DÍA' =
+			
+			SWITCH(
+			    TRUE(),
+			    'BDI_HOS_UBICACIÓN'[ESTANCIA.AL.SERVICIO] < 10, "1.MENOR A 10",
+			    'BDI_HOS_UBICACIÓN'[ESTANCIA.AL.SERVICIO] >= 10 && 'BDI_HOS_UBICACIÓN'[ESTANCIA.AL.SERVICIO] <= 12, "2. ENTRE 10 - 12",
+			    'BDI_HOS_UBICACIÓN'[ESTANCIA.AL.SERVICIO] > 12, "3. MAYOR A 12",
+			    "Sin Dato"
+			)
+		lineageTag: c990a9f3-2f05-4ac0-bce4-342c5d04504d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition BDI_HOS_UBICACIÓN = m
+		mode: import
+		source =
+				let
+				    Origen = Folder.Files("Z:\JEFATURA\POWER BI GENERAL\AMANECIDOS\Base\excel"),
+				    #"Archivos ocultos filtrados1" = Table.SelectRows(Origen, each [Attributes]?[Hidden]? <> true),
+				    #"Invocar función personalizada1" = Table.AddColumn(#"Archivos ocultos filtrados1", "Transformar archivo", each #"Transformar archivo"([Content])),
+				    #"Columnas con nombre cambiado1" = Table.RenameColumns(#"Invocar función personalizada1", {"Name", "Source.Name"}),
+				    #"Otras columnas quitadas1" = Table.SelectColumns(#"Columnas con nombre cambiado1", {"Source.Name", "Transformar archivo"}),
+				    #"Columna de tabla expandida1" = Table.ExpandTableColumn(#"Otras columnas quitadas1", "Transformar archivo", Table.ColumnNames(#"Transformar archivo"(#"Archivo de ejemplo"))),
+				    #"Columnas quitadas2" = Table.RemoveColumns(#"Columna de tabla expandida1",{"Source.Name", "Name", "Item", "Kind", "Hidden"}),
+				    #"Se expandió Data" = Table.ExpandTableColumn(#"Columnas quitadas2", "Data", {"Column1", "Column2", "Column3", "Column4", "Column5", "Column6", "Column7", "Column8", "Column9", "Column10", "Column11", "Column12", "Column13", "Column14", "Column15", "Column16", "Column17", "Column18", "Column19", "Column20", "Column21", "Column22", "Column23", "Column24", "Column25", "Column26", "Column27"}, {"Column1", "Column2", "Column3", "Column4", "Column5", "Column6", "Column7", "Column8", "Column9", "Column10", "Column11", "Column12", "Column13", "Column14", "Column15", "Column16", "Column17", "Column18", "Column19", "Column20", "Column21", "Column22", "Column23", "Column24", "Column25", "Column26", "Column27"}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Se expandió Data",{"Column24", "Column25", "Column26", "Column27"}),
+				    #"Filas superiores quitadas" = Table.Skip(#"Columnas quitadas",7),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(#"Filas superiores quitadas", [PromoteAllScalars=true]),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Encabezados promovidos",{{"FECHA INGRESO", "FEC_INGR"}}),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Columnas con nombre cambiado",{{"FEC_INGR", type date}, {"ESTANCIA.AL.SERVICIO", Int64.Type}, {"ESTANCIA_HNERM", Int64.Type}, {"EDAD", Int64.Type}}),
+				    #"Filas filtradas" = Table.SelectRows(#"Tipo cambiado", each ([PISO] <> "")),
+				    #"QUITAMOS TEMPORALES" = Table.SelectRows(#"Filas filtradas", each not Text.StartsWith([CAMA], "TEM")),
+				    #"QUITAMOS VEE" = Table.SelectRows(#"QUITAMOS TEMPORALES", each not Text.StartsWith([CAMA], "VEE"))
+				in
+				    #"QUITAMOS VEE"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

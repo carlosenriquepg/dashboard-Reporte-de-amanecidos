@@ -1,0 +1,53 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "2d3e117e44b9d9486800",
+  "position": {
+    "x": 0.0077582348892870634,
+    "y": 0,
+    "z": 13000,
+    "height": 36.2911877394636,
+    "width": 377.62452107279694,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "ESTANCIA EN EL SERVICO",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "color": "#0a5fb4"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "32ad23ccce2324fde2ed"
+}

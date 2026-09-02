@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "AMANECIDOS - HOSPITALIZACION"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ac4cd6a0-cd72-48a6-84f0-ab5cd9483eb6"
+  }
+}

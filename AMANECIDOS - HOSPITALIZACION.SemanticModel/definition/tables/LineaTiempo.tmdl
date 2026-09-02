@@ -1,0 +1,123 @@
+table LineaTiempo
+	lineageTag: 13cfcce5-d1fc-4449-9dbb-bb3ded6b131d
+
+	measure 'Promedio Pacientes por Dia' = ```
+			
+			AVERAGEX(
+			    FILTER(
+			        VALUES('LineaTiempo'[Fecha]),
+			        CALCULATE(SUM('LineaTiempo'[N° Paciente])) > 0
+			    ), 
+			    CALCULATE(SUM('LineaTiempo'[N° Paciente]))
+			)
+			```
+		lineageTag: b33b16d0-c6f0-4d49-90b1-3a08af2f84bb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Departamento
+		dataType: string
+		lineageTag: eeee9949-e0b9-4339-a5d1-5b9ff4cd05ab
+		summarizeBy: none
+		sourceColumn: Departamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Servicio
+		dataType: string
+		lineageTag: d9c9bd71-997e-4cc0-b91a-c53aa2e1f55a
+		summarizeBy: none
+		sourceColumn: Servicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'N° Paciente'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4df846b6-bfd1-4047-8d0f-acd401009871
+		summarizeBy: sum
+		sourceColumn: N° Paciente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Promedio
+		dataType: double
+		lineageTag: 3b7c38cf-6870-4735-b586-bdc5a9af1f8f
+		summarizeBy: sum
+		sourceColumn: Promedio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5e9b58c2-e758-404c-9839-16604727950c
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		variation Variación
+			isDefault
+			relationship: 96af823d-0138-490d-a98a-5edaee4f6504
+			defaultHierarchy: LocalDateTable_1935956d-2294-4ef8-9457-e20d97087b31.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column MesNum
+		dataType: int64
+		formatString: 0
+		lineageTag: ae3a7441-aa17-449f-958a-b110f028a4e3
+		summarizeBy: sum
+		sourceColumn: MesNum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		dataType: string
+		lineageTag: cab69a2c-cb74-4e18-b9e9-9874f568ecd1
+		summarizeBy: none
+		sourceColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año
+		dataType: string
+		lineageTag: 22ed4edf-5c3f-4828-af4c-d4e2925a32e6
+		summarizeBy: none
+		sourceColumn: Año
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia
+		dataType: string
+		lineageTag: 00526890-465f-4606-afe6-a27044868bee
+		summarizeBy: none
+		sourceColumn: Dia
+
+		annotation SummarizationSetBy = Automatic
+
+	partition LineaTiempo = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("Z:\JEFATURA\POWER BI GENERAL\AMANECIDOS\BaseLineaDeTiempo\BaseLineaTiempoHospi.xlsx"), null, true),
+				    Hoja1_Sheet = Origen{[Item="Hoja1",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Hoja1_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Procedencia General", type text}, {"Servicio Específico", type text}, {"N° Paciente", Int64.Type}, {"Promedio", type number}, {"Fecha", type date}}),
+				    Redondeado = Table.TransformColumns(#"Tipo cambiado",{{"Promedio", each Number.Round(_, 2), type number}}),
+				    #"Personalizada agregada" = Table.AddColumn(Redondeado, "MesNum", each Date.Month([Fecha])),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Personalizada agregada",{{"MesNum", Int64.Type}}),
+				    #"Personalizada agregada1" = Table.AddColumn(#"Tipo cambiado1", "Mes", each Date.MonthName([Fecha])),
+				    #"Personalizada agregada2" = Table.AddColumn(#"Personalizada agregada1", "Año", each Date.Year([Fecha])),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Personalizada agregada2",{{"Procedencia General", "Departamento"}, {"Servicio Específico", "Servicio"}}),
+				    #"Personalizada agregada3" = Table.AddColumn(#"Columnas con nombre cambiado", "Dia", each Date.Day([Fecha]))
+				in
+				    #"Personalizada agregada3"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

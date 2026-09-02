@@ -1,0 +1,99 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 895.9155966092967,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 33.220183486238483
+          },
+          "nodeIndex": "FECHA ACTUALIZACION",
+          "size": {
+            "height": 149,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1206.6520160981001,
+            "y": 0
+          },
+          "nodeIndex": "BDI_HOS_UBICACIÓN",
+          "nodeLineageTag": "a91faeea-577f-472a-8e5b-cd5c4b2f40b2",
+          "size": {
+            "height": 685.6522156714517,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1985.0298820445607,
+            "y": 318.64089121887287
+          },
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "14d9e1ea-983c-43ee-9300-c85f56f01f7b",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1991.3103538663172,
+            "y": 2.2948885976408633
+          },
+          "nodeIndex": "LineaTiempo",
+          "nodeLineageTag": "13cfcce5-d1fc-4449-9dbb-bb3ded6b131d",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 2275.3103538663172,
+            "y": 192.82610783572585
+          },
+          "nodeIndex": "EstDispoCama",
+          "nodeLineageTag": "1a087a25-f519-4a40-a118-982824800f1a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2559.3103538663172,
+            "y": 266.82610783572585
+          },
+          "nodeIndex": "GER_DEPAR",
+          "nodeLineageTag": "42cadee7-6dc9-4955-b9bf-6f5f5eea92a7",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 74.672212709758952,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

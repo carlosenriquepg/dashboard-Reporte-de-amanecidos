@@ -1,0 +1,93 @@
+expression ruta = "C:\Users\Usuario1\Desktop\123\AMANECIDOS\HOSP\TABLAS" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 8595e466-8059-46f8-93ef-769c60f25b5c
+
+	annotation PBI_ResultType = Text
+
+expression Parámetro1 = #"Archivo de ejemplo" meta [IsParameterQuery=true, BinaryIdentifier=#"Archivo de ejemplo", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 34f3a778-414b-433b-92bf-cb8886dec5b0
+	queryGroup: 'Transformar archivo de 2024\Consultas auxiliares'
+
+	annotation PBI_ResultType = Binary
+
+	annotation PBI_NavigationStepName = Navegación
+
+expression 'Transformar archivo de ejemplo' =
+		let
+		    Origen = Excel.Workbook(Parámetro1, null, true)
+		in
+		    Origen
+	lineageTag: 6e6fabc1-c62b-48cb-ab1f-84c1f2d77f4f
+	queryGroup: 'Transformar archivo de 2024'
+
+	annotation PBI_ResultType = Table
+
+expression 'Archivo de ejemplo' =
+		let
+		    Origen = Folder.Files("Z:\JEFATURA\POWER BI GENERAL\AMANECIDOS\Base\excel"),
+		    Navegación1 = Origen{0}[Content]
+		in
+		    Navegación1
+	lineageTag: 9907a0d2-74ce-4fe2-80d1-335e72253abb
+	queryGroup: 'Transformar archivo de 2024\Consultas auxiliares'
+
+	annotation PBI_ResultType = Binary
+
+	annotation PBI_NavigationStepName = Navegación
+
+expression 'Transformar archivo' =
+		let
+		    Origen = (Parámetro1 as binary) => let
+		    Origen = Excel.Workbook(Parámetro1, null, true)
+		in
+		    Origen
+		in
+		    Origen
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""Transformar archivo de ejemplo""}" ]
+	lineageTag: b6716215-1e89-4e5e-ad09-742af074acdf
+	queryGroup: 'Transformar archivo de 2024\Consultas auxiliares'
+
+	annotation PBI_ResultType = Function
+
+expression Parámetro2 = #"Archivo de ejemplo (2)" meta [IsParameterQuery=true, BinaryIdentifier=#"Archivo de ejemplo (2)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 433925be-0baa-46b2-bfee-adcd57bdbc1e
+	queryGroup: 'Transformar archivo de EstDispoCama\Consultas auxiliares'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Archivo de ejemplo (2)' =
+		let
+		    Origen = Folder.Files("Z:\JEFATURA\POWER BI GENERAL\AMANECIDOS\Base\EstDispoCama"),
+		    Navegación1 = Origen{0}[Content]
+		in
+		    Navegación1
+	lineageTag: c4b3ae65-dd5f-4878-8cf4-0305a4224549
+	queryGroup: 'Transformar archivo de EstDispoCama\Consultas auxiliares'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transformar archivo de ejemplo (2)' =
+		let
+		    Origen = Csv.Document(Parámetro2,[Delimiter="|", Columns=20, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+		    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true])
+		in
+		    #"Encabezados promovidos"
+	lineageTag: 4b0b776b-5b8b-470d-9094-f0d61578ddc6
+	queryGroup: 'Transformar archivo de EstDispoCama'
+
+	annotation PBI_ResultType = Table
+
+expression 'Transformar archivo (2)' =
+		let
+		    Origen = (Parámetro2 as binary) => let
+		    Origen = Csv.Document(Parámetro2,[Delimiter="|", Columns=20, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+		    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true])
+		in
+		    #"Encabezados promovidos"
+		in
+		    Origen
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""Transformar archivo de ejemplo (2)""}" ]
+	lineageTag: ca01bb3c-2827-402d-ab17-1f924c65ff84
+	queryGroup: 'Transformar archivo de EstDispoCama\Consultas auxiliares'
+
+	annotation PBI_ResultType = Function
+

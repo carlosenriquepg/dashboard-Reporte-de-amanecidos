@@ -1,0 +1,12 @@
+# Archivos temporales de Power BI
+*.tmp
+*.lock
+**/cache.abf
+
+# Carpetas de datos locales
+*.Dataset/Data/
+*.SemanticModel/Data/
+
+# Archivos de sistema de Windows
+Thumbs.db
+Desktop.ini

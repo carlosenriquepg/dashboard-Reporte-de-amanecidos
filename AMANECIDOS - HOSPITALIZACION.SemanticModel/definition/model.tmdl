@@ -1,0 +1,46 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-PE
+	dataAccessOptions
+		fastCombine
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup 'Transformar archivo de 2024'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Transformar archivo de 2024\Consultas auxiliares'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Transformar archivo de EstDispoCama'
+
+	annotation PBI_QueryGroupOrder = 2
+
+queryGroup 'Transformar archivo de EstDispoCama\Consultas auxiliares'
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation PBI_QueryOrder = ["FECHA ACTUALIZACION","ruta","BDI_HOS_UBICACIÓN","Parámetro1","Transformar archivo de ejemplo","Archivo de ejemplo","Transformar archivo","Medidas","LineaTiempo","EstDispoCama","Archivo de ejemplo (2)","Parámetro2","Transformar archivo de ejemplo (2)","Transformar archivo (2)","GER_DEPAR","CLASIFICACION"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DateTableTemplate_b9e530b3-0f53-4775-a1ba-37d7bdc8a9e5
+ref table 'FECHA ACTUALIZACION'
+ref table LocalDateTable_5c240e8b-be4e-424e-b53c-e9a59b3a109f
+ref table BDI_HOS_UBICACIÓN
+ref table Medidas
+ref table LineaTiempo
+ref table LocalDateTable_1935956d-2294-4ef8-9457-e20d97087b31
+ref table LocalDateTable_98fda02d-44ff-4b17-a441-c00c99d0c114
+ref table EstDispoCama
+ref table LocalDateTable_c4419115-3fca-4e5f-92c5-3379557f03b8
+ref table GER_DEPAR
+ref table CLASIFICACION
+
+ref cultureInfo es-ES
+
