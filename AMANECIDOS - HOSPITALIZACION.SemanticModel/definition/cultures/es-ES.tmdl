@@ -1743,7 +1743,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "Promedio Pacientes día": {
+			          "Promedio Pacientes Día": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",

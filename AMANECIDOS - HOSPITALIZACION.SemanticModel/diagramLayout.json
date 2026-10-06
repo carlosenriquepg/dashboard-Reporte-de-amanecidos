@@ -84,6 +84,19 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2843.3103538663172,
+            "y": 278.82610783572585
+          },
+          "nodeIndex": "CLASIFICACION",
+          "nodeLineageTag": "b1bcba8c-c445-4acd-ac1e-98dff17e03cc",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Todas las tablas",
