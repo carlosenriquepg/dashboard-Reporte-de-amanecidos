@@ -1,0 +1,189 @@
+table df_camas_gerencia_clasificacion
+	lineageTag: ece60fac-fd74-4997-af2a-ee703a21eace
+
+	measure DISPONIBLE =
+			
+			CALCULATE(
+			    COUNTA('df_camas_gerencia_clasificacion'[TIPOCAMA]) + 0,
+			    'df_camas_gerencia_clasificacion'[ESTADO_CAMA] = "DISPONIBLE",
+			    'df_camas_gerencia_clasificacion'[TIPOCAMA] IN { "CAMA", "INCUBADORA" }
+			)
+		formatString: 0
+		lineageTag: d59156d2-3704-4572-8dff-9372c909122e
+
+	measure OCUPADA =
+			
+			CALCULATE(
+			    COUNTA('df_camas_gerencia_clasificacion'[TIPOCAMA]) + 0,
+			    'df_camas_gerencia_clasificacion'[ESTADO_CAMA] = "OCUPADA",
+			    'df_camas_gerencia_clasificacion'[TIPOCAMA] IN { "CAMA", "INCUBADORA" }
+			)
+		formatString: 0
+		lineageTag: 7f15367c-d90c-4ea8-931b-061b5c1cbcc0
+
+	measure CAPACIDAD = [DISPONIBLE] + [OCUPADA]
+		formatString: 0
+		lineageTag: b96d808a-bcbe-4138-8a9c-4750f5b41611
+
+	column CODSERVICIO
+		dataType: string
+		lineageTag: cab91dba-ceca-4b20-8c4e-6f64e9a60f18
+		summarizeBy: none
+		sourceColumn: CODSERVICIO
+
+		annotation SummarizationSetBy = Automatic
+
+	column SERVICIO
+		dataType: string
+		lineageTag: 41de809f-f72a-49b6-8305-6a7411a13a2c
+		summarizeBy: none
+		sourceColumn: SERVICIO
+
+		annotation SummarizationSetBy = Automatic
+
+	column ESTADO_CAMA
+		dataType: string
+		lineageTag: 5ffafa8a-f596-4e93-bcc0-293321b736dd
+		summarizeBy: none
+		sourceColumn: ESTADO_CAMA
+
+		annotation SummarizationSetBy = Automatic
+
+	column TIPOCAMA
+		dataType: string
+		lineageTag: fdc161a9-371a-49f6-ac25-ed88e7284e31
+		summarizeBy: none
+		sourceColumn: TIPOCAMA
+
+		annotation SummarizationSetBy = Automatic
+
+	column DOCPACIENTE
+		dataType: int64
+		formatString: 0
+		lineageTag: 5bba01a9-2a84-4a64-9e82-346ed2353fb1
+		summarizeBy: sum
+		sourceColumn: DOCPACIENTE
+
+		annotation SummarizationSetBy = Automatic
+
+	column FECHACTUAL
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0f953fe3-6d03-4efd-9652-4df6fa3db148
+		summarizeBy: none
+		sourceColumn: FECHACTUAL
+
+		variation Variación
+			isDefault
+			relationship: 29addf87-4be5-48a2-ae75-eac94d56c5e4
+			defaultHierarchy: LocalDateTable_dd432e26-646c-4621-93f3-75627648f631.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column NUMACTMED
+		dataType: int64
+		formatString: 0
+		lineageTag: 1307b2a9-70e7-4651-91e6-42b5cc38abf3
+		summarizeBy: sum
+		sourceColumn: NUMACTMED
+
+		annotation SummarizationSetBy = Automatic
+
+	column SEXO
+		dataType: string
+		lineageTag: cc635e1f-cd7a-4763-ab76-ea8f6341394b
+		summarizeBy: none
+		sourceColumn: SEXO
+
+		annotation SummarizationSetBy = Automatic
+
+	column EDAD
+		dataType: int64
+		formatString: 0
+		lineageTag: 2d2485cf-e4bb-42e6-95db-f3bee4cc1f0a
+		summarizeBy: sum
+		sourceColumn: EDAD
+
+		annotation SummarizationSetBy = Automatic
+
+	column FECHINGRESO
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 839af48f-c49f-4b09-95bb-50201c78b98d
+		summarizeBy: none
+		sourceColumn: FECHINGRESO
+
+		variation Variación
+			isDefault
+			relationship: e9c0d6f2-22f2-4215-a980-85b47e2f47ac
+			defaultHierarchy: LocalDateTable_601fdcfe-9731-4c18-9a32-9f315a7cdf91.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column HORINGRESO
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 55be6dca-9760-47fc-aa62-1706feaac35d
+		summarizeBy: none
+		sourceColumn: HORINGRESO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column CLASIFICACION
+		dataType: string
+		lineageTag: 0390c087-aa9d-4cde-a84b-a15afb0735dd
+		summarizeBy: none
+		sourceColumn: CLASIFICACION
+
+		annotation SummarizationSetBy = Automatic
+
+	column GERENCIA
+		dataType: string
+		lineageTag: ee8b4e14-fcaa-4e75-9948-d55f96e98dc2
+		summarizeBy: none
+		sourceColumn: GERENCIA
+
+		annotation SummarizationSetBy = Automatic
+
+	column DEPARTAMENTO
+		dataType: string
+		lineageTag: 1e4e00ce-106d-468f-a089-0ca6f74b0c5b
+		summarizeBy: none
+		sourceColumn: DEPARTAMENTO
+
+		annotation SummarizationSetBy = Automatic
+
+	column CAMHOSPI
+		dataType: string
+		lineageTag: f2ba470d-187a-4f9f-97c0-d1b37a0985a7
+		summarizeBy: none
+		sourceColumn: CAMHOSPI
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ESTACION NOMBRE'
+		dataType: string
+		lineageTag: 9627c874-3d34-4ee6-80fd-fa2c8c478059
+		summarizeBy: none
+		sourceColumn: ESTACION NOMBRE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition df_camas_gerencia_clasificacion = m
+		mode: import
+		source =
+				let
+				  Origen = Csv.Document(File.Contents("Z:\JEFATURA\POWER BI GENERAL\AMANECIDOS\Base\Camas hosp y uci\df_camas_gerencia_clasificacion.csv"), [Delimiter = ",", Columns = 16, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
+				  #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),
+				  #"Tipo de columna cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos", {{"CODSERVICIO", type text}, {"SERVICIO", type text}, {"ESTADO_CAMA", type text}, {"TIPOCAMA", type text}, {"DOCPACIENTE", Int64.Type}, {"FECHACTUAL", type date}, {"NUMACTMED", Int64.Type}, {"SEXO", type text}, {"EDAD", Int64.Type}, {"FECHINGRESO", type date}, {"HORINGRESO", type time}, {"CLASIFICACION", type text}, {"GERENCIA", type text}, {"DEPARTAMENTO", type text}, {"CAMHOSPI", type text}, {"ESTACION NOMBRE", type text}}, "es")
+				in
+				  #"Tipo de columna cambiado"
+
+	annotation PBI_ResultType = Table
+

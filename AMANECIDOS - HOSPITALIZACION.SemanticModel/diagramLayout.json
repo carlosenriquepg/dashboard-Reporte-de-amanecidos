@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 895.9155966092967,
+        "x": 1362.4202857183232,
         "y": 0
       },
       "nodes": [
@@ -61,19 +61,6 @@
         },
         {
           "location": {
-            "x": 2275.3103538663172,
-            "y": 192.82610783572585
-          },
-          "nodeIndex": "EstDispoCama",
-          "nodeLineageTag": "1a087a25-f519-4a40-a118-982824800f1a",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
             "x": 2559.3103538663172,
             "y": 266.82610783572585
           },
@@ -97,10 +84,23 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2552.7994555921941,
+            "y": 0
+          },
+          "nodeIndex": "df_camas_gerencia_clasificacion",
+          "nodeLineageTag": "ece60fac-fd74-4997-af2a-ee703a21eace",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Todas las tablas",
-      "zoomValue": 74.672212709758952,
+      "zoomValue": 69.9954071982311,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

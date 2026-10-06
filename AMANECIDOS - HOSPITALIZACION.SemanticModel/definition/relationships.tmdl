@@ -13,12 +13,17 @@ relationship e8b5bdbe-d843-457a-951a-c89c119b298d
 	fromColumn: BDI_HOS_UBICACIÓN.FEC_INGR
 	toColumn: LocalDateTable_98fda02d-44ff-4b17-a441-c00c99d0c114.Date
 
-relationship c652d43a-d81d-408d-b969-44d8b6b86a43
-	joinOnDateBehavior: datePartOnly
-	fromColumn: EstDispoCama.FECHINGRESO
-	toColumn: LocalDateTable_c4419115-3fca-4e5f-92c5-3379557f03b8.Date
-
 relationship AutoDetected_6c1319e1-9768-4f06-8f07-7c43e46c838f
 	fromColumn: BDI_HOS_UBICACIÓN.ESTACION
 	toColumn: CLASIFICACION.ESTACION
+
+relationship 29addf87-4be5-48a2-ae75-eac94d56c5e4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: df_camas_gerencia_clasificacion.FECHACTUAL
+	toColumn: LocalDateTable_dd432e26-646c-4621-93f3-75627648f631.Date
+
+relationship e9c0d6f2-22f2-4215-a980-85b47e2f47ac
+	joinOnDateBehavior: datePartOnly
+	fromColumn: df_camas_gerencia_clasificacion.FECHINGRESO
+	toColumn: LocalDateTable_601fdcfe-9731-4c18-9a32-9f315a7cdf91.Date
 
