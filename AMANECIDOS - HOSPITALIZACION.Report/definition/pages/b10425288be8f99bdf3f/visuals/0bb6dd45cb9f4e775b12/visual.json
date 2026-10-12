@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "0bb6dd45cb9f4e775b12",
   "position": {
-    "x": 703.63636363636363,
+    "x": 678.90675241157555,
     "y": 0,
     "z": 1000,
     "height": 67.272727272727266,
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "MOVIMIENTO CAMAS",
+                    "value": "MOVIMIENTO UCI Y UCIN",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "32pt",

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "ef1b30d57ea0bc65af7c",
   "position": {
     "x": 209.62025316455697,
@@ -23,11 +23,11 @@
                       "Entity": "BDI_HOS_UBICACIÓN"
                     }
                   },
-                  "Property": "GERENCIA"
+                  "Property": "AREA_PROCEDENCIA"
                 }
               },
-              "queryRef": "BDI_HOS_UBICACIÓN.GERENCIA",
-              "nativeQueryRef": "GERENCIA",
+              "queryRef": "BDI_HOS_UBICACIÓN.AREA_PROCEDENCIA",
+              "nativeQueryRef": "AREA_PROCEDENCIA",
               "active": true
             }
           ]
@@ -91,7 +91,7 @@
             "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
+                  "Value": "11D"
                 }
               }
             }

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "86faee3e8bfc963e9d89",
   "position": {
-    "x": 10,
-    "y": 283.33333333333337,
+    "x": 10.806754221388369,
+    "y": 282.77673545966229,
     "z": 17000,
-    "height": 171.66666666666669,
-    "width": 583.33333333333337,
+    "height": 176.51031894934334,
+    "width": 572.75797373358353,
     "tabOrder": 16000
   },
   "visual": {
@@ -73,6 +73,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "df_camas_gerencia_clasificacion"
+                  }
+                },
+                "Property": "DISPONIBLE"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
@@ -318,7 +335,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "221.66666666666666D"
+                  "Value": "214.71055826936288D"
                 }
               }
             }

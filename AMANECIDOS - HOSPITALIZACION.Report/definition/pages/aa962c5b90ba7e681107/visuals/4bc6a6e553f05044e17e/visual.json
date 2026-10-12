@@ -1,0 +1,53 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "4bc6a6e553f05044e17e",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 13000,
+    "height": 35.555555555555557,
+    "width": 366.66666666666669,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": " SERVICIO OBTETRICO POR PROCEDENCIA ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "color": "#a28f58"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "662079053b5234624e7a"
+}

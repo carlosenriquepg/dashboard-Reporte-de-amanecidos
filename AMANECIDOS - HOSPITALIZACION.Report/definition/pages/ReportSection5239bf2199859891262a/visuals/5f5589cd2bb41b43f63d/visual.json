@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "5f5589cd2bb41b43f63d",
   "position": {
     "x": 476.39569049951029,
@@ -42,6 +42,21 @@
               },
               "queryRef": "BDI_HOS_UBICACIÓN.BLOCK",
               "nativeQueryRef": "BLOCK"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BDI_HOS_UBICACIÓN"
+                    }
+                  },
+                  "Property": "ACT. MEDICA"
+                }
+              },
+              "queryRef": "BDI_HOS_UBICACIÓN.ACT. MEDICA",
+              "nativeQueryRef": "N° ACT. MEDICO",
+              "displayName": "N° ACT. MEDICO"
             },
             {
               "field": {
@@ -303,7 +318,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "92.03474683820734D"
+                  "Value": "86.20794645102397D"
                 }
               }
             }
@@ -395,6 +410,20 @@
           "selector": {
             "metadata": "Sum(BDI_HOS_UBICACIÓN.EDAD)"
           }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "81.02733527529409D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BDI_HOS_UBICACIÓN.ACT. MEDICA"
+          }
         }
       ],
       "columnFormatting": [
@@ -480,6 +509,27 @@
           },
           "selector": {
             "metadata": "Sum(BDI_HOS_UBICACIÓN.ESTANCIA_HNERM)"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BDI_HOS_UBICACIÓN.ACT. MEDICA"
           }
         }
       ]

@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 1362.4202857183232,
+        "x": 15.715316819069791,
         "y": 0
       },
       "nodes": [
@@ -94,6 +94,16 @@
           "nodeLineageTag": "ece60fac-fd74-4997-af2a-ee703a21eace",
           "size": {
             "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {},
+          "nodeIndex": "GLOSARIO",
+          "nodeLineageTag": "53fa5ab3-ba4b-4b6b-bac6-830efb97cb92",
+          "size": {
+            "height": 152,
             "width": 234
           },
           "zIndex": 0

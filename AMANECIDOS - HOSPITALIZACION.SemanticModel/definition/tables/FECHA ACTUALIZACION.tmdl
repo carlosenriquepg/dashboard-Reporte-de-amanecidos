@@ -1,6 +1,10 @@
 table 'FECHA ACTUALIZACION'
 	lineageTag: 52b7070b-34c5-48fb-8e6f-58339dbff17d
 
+	measure Fecha_Ayer_Medida = MAX('FECHA ACTUALIZACION'[LastRefresh]) - 1
+		formatString: General Date
+		lineageTag: 30a14399-ee18-44c1-96db-f73767be2489
+
 	column LastRefresh
 		dataType: dateTime
 		formatString: d/mm/yyyy hh:nn:ss

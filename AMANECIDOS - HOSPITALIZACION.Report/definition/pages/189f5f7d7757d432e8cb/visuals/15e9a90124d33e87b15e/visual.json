@@ -3,10 +3,10 @@
   "name": "15e9a90124d33e87b15e",
   "position": {
     "x": 0,
-    "y": 470,
+    "y": 473.69606003752347,
     "z": 3000,
-    "height": 596.66666666666674,
-    "width": 583.33333333333337,
+    "height": 592.57035647279554,
+    "width": 594.37148217636025,
     "tabOrder": 2000
   },
   "visual": {
@@ -73,6 +73,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "df_camas_gerencia_clasificacion"
+                  }
+                },
+                "Property": "DISPONIBLE"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {

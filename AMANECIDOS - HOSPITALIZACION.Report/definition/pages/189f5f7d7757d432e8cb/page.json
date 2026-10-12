@@ -64,5 +64,6 @@
         "isLockedInViewMode": true
       }
     ]
-  }
+  },
+  "visibility": "HiddenInViewMode"
 }

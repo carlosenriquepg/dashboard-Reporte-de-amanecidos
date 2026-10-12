@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "40db8abc30df3572909c",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 13000,
+    "height": 35.555555555555557,
+    "width": 366.66666666666669,
+    "tabOrder": 27001
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "color": "#81e0e1"
+                    }
+                  },
+                  {
+                    "value": "SERVICIO PSIQUIATRICO POR PROCEDENCIA ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "color": "#7c451e"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "2393696604cb89b6397f"
+}

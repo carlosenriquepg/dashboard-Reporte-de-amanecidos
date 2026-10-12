@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "21082fbedc3c7759e24a",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 13000,
+    "height": 32.222222222222221,
+    "width": 283.33333333333331,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "color": "#57d6d7"
+                    }
+                  },
+                  {
+                    "value": "SERVICIO PEDIATRICA POR PROCEDENCIA ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "color": "#b9672c"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "f3e90898db53f7f18f26"
+}

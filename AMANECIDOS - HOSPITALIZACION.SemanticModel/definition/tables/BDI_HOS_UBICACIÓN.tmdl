@@ -230,6 +230,19 @@ table BDI_HOS_UBICACIÓN
 
 		annotation SummarizationSetBy = Automatic
 
+	column Es_Dia_Anterior =
+			
+			VAR _UltimaFecha = CALCULATE(MAX('FECHA ACTUALIZACION'[LastRefresh]))
+			VAR _FechaAyer = INT(_UltimaFecha) - 1
+			VAR _FechaRegistro = INT('BDI_HOS_UBICACIÓN'[FEC_INGR])
+			RETURN
+			    IF(_FechaRegistro = _FechaAyer, 1, 0)
+		formatString: 0
+		lineageTag: 71be2cce-20f5-44dc-a78d-35c30484b75e
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
 	partition BDI_HOS_UBICACIÓN = m
 		mode: import
 		source =

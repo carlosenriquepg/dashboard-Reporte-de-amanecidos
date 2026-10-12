@@ -1,0 +1,52 @@
+table GLOSARIO
+	lineageTag: 53fa5ab3-ba4b-4b6b-bac6-830efb97cb92
+
+	column Indicador
+		dataType: string
+		lineageTag: e179d664-47b6-48f6-893e-9a599f2f4cdb
+		summarizeBy: none
+		sourceColumn: Indicador
+		sortByColumn: ORDEN
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Definición
+		dataType: string
+		lineageTag: a6a5d59c-d899-4c33-a96c-72bce0017390
+		summarizeBy: none
+		sourceColumn: Definición
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Forma de Calcular'
+		dataType: string
+		lineageTag: a3158f6d-0590-4a67-ae1f-bf229174a31c
+		summarizeBy: none
+		sourceColumn: Forma de Calcular
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORDEN
+		dataType: string
+		lineageTag: 2d7e8306-bf97-448f-92c8-b34fa0b6222d
+		summarizeBy: none
+		sourceColumn: ORDEN
+
+		annotation SummarizationSetBy = Automatic
+
+	partition GLOSARIO = m
+		mode: import
+		source =
+				let
+				  Origen = Excel.Workbook(File.Contents("Z:\JEFATURA\POWER BI GENERAL\AMANECIDOS\Base\GLOSARIO.xlsx"), null, true),
+				  #"Navegación 1" = Origen{[Item = "Hoja1", Kind = "Sheet"]}[Data],
+				  #"Encabezados promovidos" = Table.PromoteHeaders(#"Navegación 1", [PromoteAllScalars = true]),
+				  #"Tipo de columna cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos", {{"Indicador", type text}, {"Definición", type text}, {"Forma de Calcular", type text}}, "es"),
+				  #"Filas filtradas" = Table.SelectRows(#"Tipo de columna cambiado", each ([Indicador] <> "% OCUPACIÓN CAMA" and [Indicador] <> "EGRESOS" and [Indicador] <> "RENDIMIENTO CAMA"))
+				in
+				  #"Filas filtradas"
+
+	annotation PBI_ResultType = Table
+

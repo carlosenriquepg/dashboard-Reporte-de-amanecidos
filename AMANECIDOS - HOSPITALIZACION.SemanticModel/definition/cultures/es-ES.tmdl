@@ -1209,6 +1209,16 @@ cultureInfo es-ES
 			            },
 			            "Weight": 0.582
 			          }
+			        },
+			        {
+			          "PROCEDENCIA": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -1268,6 +1278,9 @@ cultureInfo es-ES
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "estacion": {
@@ -1823,6 +1836,16 @@ cultureInfo es-ES
 			          "act. medica": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "N° ACT. MEDICO": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -1911,9 +1934,1418 @@ cultureInfo es-ES
 			          }
 			        }
 			      ]
+			    },
+			    "clasificacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CLASIFICACION"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clasificacion": {
+			            "State": "Generated",
+			            "Weight": 0.87
+			          }
+			        }
+			      ]
+			    },
+			    "clasificacion.estacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CLASIFICACION",
+			          "ConceptualProperty": "ESTACION"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estacion": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "clasificacion.clasificacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CLASIFICACION",
+			          "ConceptualProperty": "CLASIFICACION"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clasificacion": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "df camas gerencia clasificacion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "df_camas_gerencia_clasificacion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.codservicio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "ConceptualProperty": "CODSERVICIO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "codservicio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.servicio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "ConceptualProperty": "SERVICIO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "servicio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.estado_cama": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "ConceptualProperty": "ESTADO_CAMA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estado cama": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ESTADO_CAMA": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.tipocama": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "ConceptualProperty": "TIPOCAMA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipocama": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.docpaciente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "ConceptualProperty": "DOCPACIENTE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "docpaciente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.fechactual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "ConceptualProperty": "FECHACTUAL"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fechactual": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "df_camas_gerencia_clasificacion.fechactual.jerarquía_de_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "VariationSource": "FECHACTUAL",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jerarquía de fecha": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.fechactual.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "VariationSource": "FECHACTUAL",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fechactual año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.fechactual.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "VariationSource": "FECHACTUAL",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fechactual trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.fechactual.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "VariationSource": "FECHACTUAL",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fechactual me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.fechactual.día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "VariationSource": "FECHACTUAL",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fechactual día": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.numactmed": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "ConceptualProperty": "NUMACTMED"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "numactmed": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.sexo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "ConceptualProperty": "SEXO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sexo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.edad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "ConceptualProperty": "EDAD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "edad": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.fechingreso": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "ConceptualProperty": "FECHINGRESO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fechingreso": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "df_camas_gerencia_clasificacion.fechingreso.jerarquía_de_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "VariationSource": "FECHINGRESO",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jerarquía de fecha": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.fechingreso.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "VariationSource": "FECHINGRESO",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fechingreso año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.fechingreso.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "VariationSource": "FECHINGRESO",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fechingreso trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.fechingreso.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "VariationSource": "FECHINGRESO",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fechingreso me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.fechingreso.día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "VariationSource": "FECHINGRESO",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fechingreso día": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.horingreso": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "ConceptualProperty": "HORINGRESO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "horingreso": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "time": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "df_camas_gerencia_clasificacion.clasificacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "ConceptualProperty": "CLASIFICACION"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clasificacion": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.gerencia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "ConceptualProperty": "GERENCIA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gerencia": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.departamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "ConceptualProperty": "DEPARTAMENTO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "departamento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.camhospi": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "ConceptualProperty": "CAMHOSPI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "camhospi": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.estacion_nombre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "ConceptualProperty": "ESTACION NOMBRE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estacion nombre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.disponible": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "ConceptualProperty": "DISPONIBLE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "disponible": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.ocupada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "ConceptualProperty": "OCUPADA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ocupada": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion.capacidad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "df_camas_gerencia_clasificacion",
+			          "ConceptualProperty": "CAPACIDAD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "capacidad": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fecha_actualizacion.fecha_ayer_medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FECHA ACTUALIZACION",
+			          "ConceptualProperty": "Fecha_Ayer_Medida"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha ayer medida": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Fecha_Ayer_Medida": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "bdi_hos_ubicación.es_dia_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "BDI_HOS_UBICACIÓN",
+			          "ConceptualProperty": "Es_Dia_Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "es dia anterior": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Es_Dia_Anterior": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "df_camas_gerencia_clasificacion_fechingreso_me_has_df_camas_gerencia_clasificacion_fechingreso_día": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion.fechingreso.me": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechingreso.me"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.fechingreso.día": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechingreso.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.me"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.día"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me4"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_fechingreso_trimestre_has_df_camas_gerencia_clasificacion_fechingreso_me": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion.fechingreso.trimestre": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechingreso.trimestre"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.fechingreso.me": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechingreso.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.trimestre"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.me"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres4"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_fechingreso_año_has_df_camas_gerencia_clasificacion_fechingreso_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion.fechingreso.año": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechingreso.año"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.fechingreso.trimestre": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechingreso.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.año"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.trimestre"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años4"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_fechingreso_jerarquía_de_fecha_has_df_camas_gerencia_clasificacion_fechingreso_día": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion.fechingreso.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechingreso.jerarquía_de_fecha"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.fechingreso.día": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechingreso.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_fechingreso_jerarquía_de_fecha_has_df_camas_gerencia_clasificacion_fechingreso_me": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion.fechingreso.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechingreso.jerarquía_de_fecha"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.fechingreso.me": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechingreso.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_fechingreso_jerarquía_de_fecha_has_df_camas_gerencia_clasificacion_fechingreso_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion.fechingreso.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechingreso.jerarquía_de_fecha"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.fechingreso.trimestre": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechingreso.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_trimestres"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_fechingreso_jerarquía_de_fecha_has_df_camas_gerencia_clasificacion_fechingreso_año": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion.fechingreso.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechingreso.jerarquía_de_fecha"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.fechingreso.año": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechingreso.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_fechingreso_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion.fechingreso": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechingreso"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.fechingreso.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechingreso.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fechingresos_have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_fechactual_me_has_df_camas_gerencia_clasificacion_fechactual_día": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion.fechactual.me": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechactual.me"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.fechactual.día": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechactual.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.me"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.día"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me3"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_fechactual_trimestre_has_df_camas_gerencia_clasificacion_fechactual_me": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion.fechactual.trimestre": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechactual.trimestre"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.fechactual.me": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechactual.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.trimestre"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.me"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres3"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_fechactual_año_has_df_camas_gerencia_clasificacion_fechactual_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion.fechactual.año": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechactual.año"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.fechactual.trimestre": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechactual.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.año"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.trimestre"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años3"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_fechactual_jerarquía_de_fecha_has_df_camas_gerencia_clasificacion_fechactual_día": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion.fechactual.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechactual.jerarquía_de_fecha"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.fechactual.día": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechactual.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días1"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_fechactual_jerarquía_de_fecha_has_df_camas_gerencia_clasificacion_fechactual_me": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion.fechactual.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechactual.jerarquía_de_fecha"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.fechactual.me": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechactual.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me1"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_fechactual_jerarquía_de_fecha_has_df_camas_gerencia_clasificacion_fechactual_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion.fechactual.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechactual.jerarquía_de_fecha"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.fechactual.trimestre": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechactual.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_trimestres1"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_fechactual_jerarquía_de_fecha_has_df_camas_gerencia_clasificacion_fechactual_año": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion.fechactual.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechactual.jerarquía_de_fecha"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.fechactual.año": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechactual.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años1"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_fechactual_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion.fechactual": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechactual"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.fechactual.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechactual.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fechactuals_have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
 			    "linea_tiempo_fecha_me_has_linea_tiempo_fecha_día": {
 			      "Binding": {
 			        "ConceptualEntity": "LineaTiempo"
@@ -1943,7 +3375,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días"
+			          "ID": "me_have_días2"
 			        },
 			        {
 			          "Attribute": {
@@ -1956,7 +3388,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me"
+			          "ID": "días_have_me2"
 			        },
 			        {
 			          "Preposition": {
@@ -2009,7 +3441,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me"
+			          "ID": "trimestres_have_me2"
 			        },
 			        {
 			          "Attribute": {
@@ -2022,7 +3454,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres"
+			          "ID": "me_have_trimestres2"
 			        },
 			        {
 			          "Preposition": {
@@ -2075,7 +3507,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "años_have_trimestres"
+			          "ID": "años_have_trimestres2"
 			        },
 			        {
 			          "Attribute": {
@@ -2088,7 +3520,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_años"
+			          "ID": "trimestres_have_años2"
 			        },
 			        {
 			          "Preposition": {
@@ -2141,7 +3573,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días"
+			          "ID": "jerarquía_de_fechas_have_días2"
 			        }
 			      ]
 			    },
@@ -2174,7 +3606,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me"
+			          "ID": "jerarquía_de_fechas_have_me2"
 			        }
 			      ]
 			    },
@@ -2207,7 +3639,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres"
+			          "ID": "jerarquía_de_fechas_have_trimestres2"
 			        }
 			      ]
 			    },
@@ -2240,7 +3672,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años"
+			          "ID": "jerarquía_de_fechas_have_años2"
 			        }
 			      ]
 			    },
@@ -2306,7 +3738,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días1"
+			          "ID": "me_have_días3"
 			        },
 			        {
 			          "Attribute": {
@@ -2319,7 +3751,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me1"
+			          "ID": "días_have_me3"
 			        },
 			        {
 			          "Preposition": {
@@ -2372,7 +3804,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me1"
+			          "ID": "trimestres_have_me3"
 			        },
 			        {
 			          "Attribute": {
@@ -2385,7 +3817,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres1"
+			          "ID": "me_have_trimestres3"
 			        },
 			        {
 			          "Preposition": {
@@ -2438,7 +3870,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "años_have_trimestres1"
+			          "ID": "años_have_trimestres3"
 			        },
 			        {
 			          "Attribute": {
@@ -2451,7 +3883,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_años1"
+			          "ID": "trimestres_have_años3"
 			        },
 			        {
 			          "Preposition": {
@@ -2504,7 +3936,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días1"
+			          "ID": "jerarquía_de_fechas_have_días3"
 			        }
 			      ]
 			    },
@@ -2537,7 +3969,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me1"
+			          "ID": "jerarquía_de_fechas_have_me3"
 			        }
 			      ]
 			    },
@@ -2570,7 +4002,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres1"
+			          "ID": "jerarquía_de_fechas_have_trimestres3"
 			        }
 			      ]
 			    },
@@ -2603,7 +4035,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años1"
+			          "ID": "jerarquía_de_fechas_have_años3"
 			        }
 			      ]
 			    },
@@ -2669,7 +4101,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días2"
+			          "ID": "me_have_días4"
 			        },
 			        {
 			          "Attribute": {
@@ -2682,7 +4114,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me2"
+			          "ID": "días_have_me4"
 			        },
 			        {
 			          "Preposition": {
@@ -2735,7 +4167,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me2"
+			          "ID": "trimestres_have_me4"
 			        },
 			        {
 			          "Attribute": {
@@ -2748,7 +4180,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres2"
+			          "ID": "me_have_trimestres4"
 			        },
 			        {
 			          "Preposition": {
@@ -2801,7 +4233,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "años_have_trimestres2"
+			          "ID": "años_have_trimestres4"
 			        },
 			        {
 			          "Attribute": {
@@ -2814,7 +4246,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_años2"
+			          "ID": "trimestres_have_años4"
 			        },
 			        {
 			          "Preposition": {
@@ -2867,7 +4299,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días2"
+			          "ID": "jerarquía_de_fechas_have_días4"
 			        }
 			      ]
 			    },
@@ -2900,7 +4332,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me2"
+			          "ID": "jerarquía_de_fechas_have_me4"
 			        }
 			      ]
 			    },
@@ -2933,7 +4365,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres2"
+			          "ID": "jerarquía_de_fechas_have_trimestres4"
 			        }
 			      ]
 			    },
@@ -2966,7 +4398,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años2"
+			          "ID": "jerarquía_de_fechas_have_años4"
 			        }
 			      ]
 			    },
@@ -3000,6 +4432,811 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "last_refreshes_have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
+			    "bdi_hos_ubicación_has_clasificacion1": {
+			      "Binding": {
+			        "ConceptualEntity": "BDI_HOS_UBICACIÓN"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bdi_hos_ubicación": {
+			          "Target": {
+			            "Entity": "bdi_hos_ubicación"
+			          }
+			        },
+			        "clasificacion": {
+			          "Target": {
+			            "Entity": "clasificacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bdi_hos_ubicación"
+			            },
+			            "Object": {
+			              "Role": "clasificacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bdi_hos_ubicacións_have_clasificacions"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clasificacion"
+			            },
+			            "Object": {
+			              "Role": "bdi_hos_ubicación"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clasificacions_have_bdi_hos_ubicacións"
+			        }
+			      ]
+			    },
+			    "bdi_hos_ubicación_has_es_dia_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "BDI_HOS_UBICACIÓN"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bdi_hos_ubicación": {
+			          "Target": {
+			            "Entity": "bdi_hos_ubicación"
+			          }
+			        },
+			        "bdi_hos_ubicación.es_dia_anterior": {
+			          "Target": {
+			            "Entity": "bdi_hos_ubicación.es_dia_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bdi_hos_ubicación"
+			            },
+			            "Object": {
+			              "Role": "bdi_hos_ubicación.es_dia_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bdi_hos_ubicacións_have_es_dia_anterior"
+			        }
+			      ]
+			    },
+			    "fecha_actualizacion_has_fecha_ayer_medida": {
+			      "Binding": {
+			        "ConceptualEntity": "FECHA ACTUALIZACION"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fecha_actualizacion": {
+			          "Target": {
+			            "Entity": "fecha_actualizacion"
+			          }
+			        },
+			        "fecha_actualizacion.fecha_ayer_medida": {
+			          "Target": {
+			            "Entity": "fecha_actualizacion.fecha_ayer_medida"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fecha_actualizacion"
+			            },
+			            "Object": {
+			              "Role": "fecha_actualizacion.fecha_ayer_medida"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_actualizacions_have_fecha_ayer_medida"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_has_capacidad": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.capacidad": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.capacidad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.capacidad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_camas_gerencia_clasificacions_have_capacidad"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_has_ocupada": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.ocupada": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.ocupada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.ocupada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_camas_gerencia_clasificacions_have_ocupada"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_has_disponible": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.disponible": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.disponible"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.disponible"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_camas_gerencia_clasificacions_have_disponible"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_has_estacion_nombre": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.estacion_nombre": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.estacion_nombre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.estacion_nombre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_camas_gerencia_clasificacions_have_estacion_nombres"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_has_camhospi": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.camhospi": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.camhospi"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.camhospi"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_camas_gerencia_clasificacions_have_camhospis"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_has_departamento": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.departamento": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.departamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.departamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_camas_gerencia_clasificacions_have_departamentos"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_has_gerencia": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.gerencia": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.gerencia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.gerencia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_camas_gerencia_clasificacions_have_gerencias"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_has_clasificacion": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.clasificacion": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.clasificacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.clasificacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_camas_gerencia_clasificacions_have_clasificacions"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_has_horingreso": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.horingreso": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.horingreso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.horingreso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_camas_gerencia_clasificacions_have_horingresos"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_has_fechingreso": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.fechingreso": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechingreso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechingreso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_camas_gerencia_clasificacions_have_fechingresos"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_has_edad": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.edad": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.edad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.edad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_camas_gerencia_clasificacions_have_edads"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_has_sexo": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.sexo": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.sexo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.sexo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_camas_gerencia_clasificacions_have_sexos"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_has_numactmed": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.numactmed": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.numactmed"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.numactmed"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_camas_gerencia_clasificacions_have_numactmeds"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_has_fechactual": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.fechactual": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.fechactual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.fechactual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_camas_gerencia_clasificacions_have_fechactuals"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_has_docpaciente": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.docpaciente": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.docpaciente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.docpaciente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_camas_gerencia_clasificacions_have_docpacientes"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_has_tipocama": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.tipocama": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.tipocama"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.tipocama"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_camas_gerencia_clasificacions_have_tipocamas"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_has_estado_cama": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.estado_cama": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.estado_cama"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.estado_cama"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_camas_gerencia_clasificacions_have_estado_camas"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_has_servicio": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.servicio": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.servicio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.servicio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_camas_gerencia_clasificacions_have_servicios"
+			        }
+			      ]
+			    },
+			    "df_camas_gerencia_clasificacion_has_codservicio": {
+			      "Binding": {
+			        "ConceptualEntity": "df_camas_gerencia_clasificacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df_camas_gerencia_clasificacion": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion"
+			          }
+			        },
+			        "df_camas_gerencia_clasificacion.codservicio": {
+			          "Target": {
+			            "Entity": "df_camas_gerencia_clasificacion.codservicio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df_camas_gerencia_clasificacion"
+			            },
+			            "Object": {
+			              "Role": "df_camas_gerencia_clasificacion.codservicio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_camas_gerencia_clasificacions_have_codservicios"
+			        }
+			      ]
+			    },
+			    "clasificacion_has_clasificacion": {
+			      "Binding": {
+			        "ConceptualEntity": "CLASIFICACION"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clasificacion": {
+			          "Target": {
+			            "Entity": "clasificacion"
+			          }
+			        },
+			        "clasificacion.clasificacion": {
+			          "Target": {
+			            "Entity": "clasificacion.clasificacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clasificacion"
+			            },
+			            "Object": {
+			              "Role": "clasificacion.clasificacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clasificacions_have_clasificacions"
+			        }
+			      ]
+			    },
+			    "clasificacion_has_estacion": {
+			      "Binding": {
+			        "ConceptualEntity": "CLASIFICACION"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clasificacion": {
+			          "Target": {
+			            "Entity": "clasificacion"
+			          }
+			        },
+			        "clasificacion.estacion": {
+			          "Target": {
+			            "Entity": "clasificacion.estacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clasificacion"
+			            },
+			            "Object": {
+			              "Role": "clasificacion.estacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clasificacions_have_estacions"
 			        }
 			      ]
 			    },
@@ -3795,39 +6032,6 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "bdi_hos_ubicación_has_estacion": {
-			      "Binding": {
-			        "ConceptualEntity": "BDI_HOS_UBICACIÓN"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "bdi_hos_ubicación": {
-			          "Target": {
-			            "Entity": "bdi_hos_ubicación"
-			          }
-			        },
-			        "bdi_hos_ubicación.estacion": {
-			          "Target": {
-			            "Entity": "bdi_hos_ubicación.estacion"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "bdi_hos_ubicación"
-			            },
-			            "Object": {
-			              "Role": "bdi_hos_ubicación.estacion"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "bdi_hos_ubicacións_have_estacions"
-			        }
-			      ]
-			    },
 			    "bdi_hos_ubicación_has_resumen_estancia2": {
 			      "Binding": {
 			        "ConceptualEntity": "BDI_HOS_UBICACIÓN"
@@ -3923,7 +6127,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "bdi_hos_ubicacións_have_clasificacions"
+			          "ID": "bdi_hos_ubicacións_have_clasificacions1"
 			        }
 			      ]
 			    },

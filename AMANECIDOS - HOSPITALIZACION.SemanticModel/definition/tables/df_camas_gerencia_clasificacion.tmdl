@@ -5,8 +5,7 @@ table df_camas_gerencia_clasificacion
 			
 			CALCULATE(
 			    COUNTA('df_camas_gerencia_clasificacion'[TIPOCAMA]) + 0,
-			    'df_camas_gerencia_clasificacion'[ESTADO_CAMA] = "DISPONIBLE",
-			    'df_camas_gerencia_clasificacion'[TIPOCAMA] IN { "CAMA", "INCUBADORA" }
+			    'df_camas_gerencia_clasificacion'[ESTADO_CAMA] = "DISPONIBLE"
 			)
 		formatString: 0
 		lineageTag: d59156d2-3704-4572-8dff-9372c909122e
@@ -15,8 +14,7 @@ table df_camas_gerencia_clasificacion
 			
 			CALCULATE(
 			    COUNTA('df_camas_gerencia_clasificacion'[TIPOCAMA]) + 0,
-			    'df_camas_gerencia_clasificacion'[ESTADO_CAMA] = "OCUPADA",
-			    'df_camas_gerencia_clasificacion'[TIPOCAMA] IN { "CAMA", "INCUBADORA" }
+			    'df_camas_gerencia_clasificacion'[ESTADO_CAMA] = "OCUPADA"
 			)
 		formatString: 0
 		lineageTag: 7f15367c-d90c-4ea8-931b-061b5c1cbcc0
